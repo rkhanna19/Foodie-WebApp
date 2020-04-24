@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="jumbotron text-center">
+		<h1> What would you like to eat? </h1>
+	</div>
+	{% for food in foods %}
+	<dl>
+		<h1>{{ food.name }}</h1>
+		<p class="lead">{{ food.description }}</p>
+		{% if food.chef %}
+			<dt> Cooked by {{ food.chef }}.</dt>
+		{% else %}
+			<dt>Cooked by Anonymous.</dt>
+		{% endif %}
+	</dl>
+	{% endfor %}
+{% endblock content %}
