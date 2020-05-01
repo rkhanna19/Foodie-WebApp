@@ -1,17 +1,23 @@
 {% extends "layout.html" %}
+{% block title %}
+<div class="text-center bg-primary">
+	<h1> What would you like to eat? </h1>
+</div>
+{% endblock title %}
 {% block content %}
-	<div class="jumbotron text-center">
-		<h1> What would you like to eat? </h1>
-	</div>
 	{% for food in foods %}
-	<dl>
-		<h1>{{ food.name }}</h1>
-		<p class="lead">{{ food.description }}</p>
-		{% if food.chef %}
-			<dt> Cooked by {{ food.chef }}.</dt>
-		{% else %}
-			<dt>Cooked by Anonymous.</dt>
-		{% endif %}
-	</dl>
+	<div class="row">
+		<div class="col-sm-8">
+			<dl>
+				<h1>{{ food.name }}</h1>
+				<p class="lead">{{ food.description }}</p>
+				{% if food.chef %}
+					<dt> Cooked by {{ food.chef }}.</dt>
+				{% else %}
+					<dt>Cooked by Anonymous.</dt>
+				{% endif %}
+			</dl>
+		</div>
+	</div>
 	{% endfor %}
 {% endblock content %}
