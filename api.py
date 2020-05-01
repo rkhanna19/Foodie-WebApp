@@ -1,4 +1,7 @@
 from flask import Flask, render_template
+from image_bot import ImageBot
+from time import sleep
+
 app = Flask(__name__)
 
 foods = [
@@ -18,6 +21,14 @@ foods = [
         'chef' : "Rajesh Khanna"
     }
 ]
+
+bot = ImageBot()
+for food in foods:
+    image_url = bot.find_image(food['name'])
+    food['image'] = image_url
+    sleep(0.3)
+
+bot.kill()
 
 @app.route('/')
 @app.route('/home')
