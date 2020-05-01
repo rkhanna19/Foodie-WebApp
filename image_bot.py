@@ -33,6 +33,10 @@ class ImageBot:
             else: continue
         return image_url
 
+    def reset(self):
+        self.driver.back()
+        self.driver.back()
+
     def kill(self):
         self.driver.close()
 
@@ -40,4 +44,5 @@ class ImageBot:
 # image_url = bot.find_image("chicken tikka masala")
 # print(image_url)
 # sleep(5)
+# bot.reset()
 # bot.kill()
