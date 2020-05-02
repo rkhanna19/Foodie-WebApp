@@ -41,7 +41,7 @@ class ImageBot:
         self.driver.close()
 
 # bot = ImageBot()
-# image_url = bot.find_image("chicken tikka masala")
+# image_url = bot.find_image("Gobhi masala")
 # print(image_url)
 # sleep(5)
 # bot.reset()
