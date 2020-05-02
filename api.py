@@ -22,16 +22,6 @@ foods = [
     }
 ]
 
-bot = ImageBot()
-for food in foods:
-    image_url = bot.find_image(food['name'])
-    food['image'] = image_url
-    bot.reset()
-    sleep(0.3)
-
-bot.kill()
-
-print(foods)
 @app.route('/')
 @app.route('/home')
 def home():
@@ -42,4 +32,12 @@ def about():
     return render_template('about.html', user="Rajit")
 
 if __name__ == '__main__':
+    bot = ImageBot()
+    for food in foods:
+        image_url = bot.find_image(food['name'])
+        food['image'] = image_url
+        bot.reset()
+        sleep(0.3)
+
+    bot.kill()
     app.run(debug=True)
