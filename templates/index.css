@@ -3,12 +3,14 @@ body {
 }
 
 h1 {
-    color : blue;
     font-family: sans-serif;
-    margin-left: 20px;
 }
 
 #ronit {
     color : red;
 }
 
+.img-thumbnail .image-fluid {
+    width: 450px;
+    height: 450px;
+}
