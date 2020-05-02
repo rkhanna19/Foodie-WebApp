@@ -1,0 +1,18 @@
+h2 {
+    font-family: sans-serif;
+    color: whitesmoke;
+}
+
+#ronit {
+    color : red;
+}
+
+/* img {
+    width: 100%;
+    height: auto;
+} */
+
+img {
+    width: 450px;
+    height: 450px;
+}
